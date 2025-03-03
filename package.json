@@ -1,0 +1,39 @@
+{
+  "name": "secretdiary-backend",
+  "version": "1.0.0",
+  "description": "a healthdiary project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GhostZp/SecretDiary-project.git"
+  },
+  "author": "GhostZp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GhostZp/SecretDiary-project/issues"
+  },
+  "homepage": "https://github.com/GhostZp/SecretDiary-project#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "prettier": "3.5.3"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0"
+  }
+}
