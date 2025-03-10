@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habits</title>
+    <link rel="stylesheet" type="text/css" href="#" />
+    <script type="module" crossorigin src="../../assets/habitpage-CsU6kcKq.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/main-DP3VjRHo.js">
+    <link rel="stylesheet" crossorigin href="../../assets/main-C-QBK6oV.css">
+    <link rel="stylesheet" crossorigin href="../../assets/habitpage-DX9Syjob.css">
+  </head>
+  <body>
+    <div class="clearfix">
+      <header>
+        <div class="head_container">
+          <nav>
+            <ul>
+              <li><a class="navbar_logo">SecretDiary</a></li>
+              <li><a href="/src/pages/frontpage.html">Front</a></li>
+              <li>
+                <a class="active" href="/src/pages/habitpage.html">Habits</a>
+              </li>
+              <li><a href="/src/pages/historypage.html">History</a></li>
+              <button class="logoutBtn">Logout</button>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="ornaments">
+          <img src="../../assets/Ornament-D4U2MWlI.png" class="ornament1" alt="GreenSwirl" />
+
+          <div class="text-container">
+            <h2>Track your habits!</h2>
+
+            <p>
+              Here you can make a habit entry. This includes things like
+              drinking water, excersicing, doing a hobby you enjoy but also
+              spending money, any bad habits and alcohol consumption. Just check
+              the box if you have done the thing during your day or leave it
+              empty if you haven't done it. Simple as that!
+            </p>
+
+            <h3>Make a habit entry?</h3>
+
+            <form class="registerHabits">
+              <label for="entry_date">Date</label>
+              <input type="date" id="entry_date" required />
+
+              <label>
+                <input type="checkbox" id="drank_water" /> Drank Water
+              </label>
+
+              <label>
+                <input type="checkbox" id="exercised" /> Exercised
+              </label>
+
+              <label>
+                <input type="checkbox" id="did_hobby" /> Did Hobby
+              </label>
+
+              <label>
+                <input type="checkbox" id="spent_money" /> Spent Money
+              </label>
+
+              <label>
+                <input type="checkbox" id="bad_habit" /> Bad Habit
+              </label>
+
+              <label>
+                <input type="checkbox" id="drank_alcohol" /> Drank Alcohol
+              </label>
+
+              <button class="submitHabits" type="submit">Submit</button>
+            </form>
+          </div>
+          <img src="../../assets/Ornament-D4U2MWlI.png" class="ornament2" alt="GreenSwirl" />
+        </div>
+      </main>
+
+      <footer>
+        <div class="foot_container">
+          <div class="t4">Copyright: Anna Kallio</div>
+        </div>
+      </footer>
+
+      <div id="snackbar">Some text some message..</div>
+      <dialog class="info_dialog">
+        <p></p>
+        <button autofocus>Close</button>
+      </dialog>
+    </div>
+  </body>
+</html>

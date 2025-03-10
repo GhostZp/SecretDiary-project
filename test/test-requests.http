@@ -1,0 +1,123 @@
+# Testing http requests with Visual Studio Code REST Client extension
+
+###########################
+## Users resource endpoints
+
+### get all users
+GET http://localhost:3000/api/users
+
+
+### get user by id
+GET http://localhost:3000/api/users/3
+
+### create a new user (user registration)
+POST http://localhost:3000/api/users
+content-type: application/json
+
+{
+  "username": "newusername2",
+  "password": "passwordx",
+  "email": "newemail2@example.com"
+}
+
+### modify an existing user by id
+PUT http://localhost:3000/api/users/3
+content-type: application/json
+
+{
+  "username": "editedname",
+  "password": "editedpasswordx",
+  "email": "editedmail@example.com"
+}
+
+### delete a user (by id)
+DELETE http://localhost:3000/api/users/3
+
+### user login
+POST http://localhost:3000/api/auth/login
+content-type: application/json
+
+{
+  "username": "kukkakaali",
+  "password": "kukkakaali"
+}
+
+### USER INFO
+
+### get my user info
+GET http://localhost:3000/api/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJ1c2VybmFtZSI6ImVkaXRlZG5hbWU0MjAiLCJwYXNzd29yZCI6IiQyYSQxMCQza0ZBeHdNQ1FNdXhsUjdhR2RYS3QualhqM0U3enpBSmxuME03VTlveVFaWWd0a3ZZcEdLYSIsImVtYWlsIjoiZWRpdGVkbWFpbDQyMEBleGFtcGxlLmNvbSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAyLTE3VDExOjEwOjU0LjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTczOTk3MDYyMiwiZXhwIjoxNzQwMDU3MDIyfQ.VY33RT_MmRUwxxLw8bAXglkniOn2bcBbPgP7fEC-unI
+
+### Edit user info
+PUT http://localhost:3000/api/users/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJ1c2VybmFtZSI6Im5ld3VzZXJuYW1lMiIsInBhc3N3b3JkIjoiJDJhJDEwJGtscUN2Qno5cE9kZFFpbDYxTG9mT3V6U1I3RjhsdGpSek1yQUlGb0xnblIyOEJITzh3bzdPIiwiZW1haWwiOiJuZXdlbWFpbDJAZXhhbXBsZS5jb20iLCJjcmVhdGVkX2F0IjoiMjAyNS0wMi0xN1QxMToxMDo1NC4wMDBaIiwidXNlcl9sZXZlbCI6InJlZ3VsYXIiLCJpYXQiOjE3Mzk5NjEyNjEsImV4cCI6MTc0MDA0NzY2MX0.-v9rQBxZPvDRs3SapqgBQts8W-YtVcYPFJytSg4ReZA
+content-type: application/json
+
+{
+  "username": "editedname420",
+  "password": "editedpasswordx420",
+  "email": "editedmail420@example.com"
+}
+
+### DELETE a user by id
+DELETE http://localhost:3000/api/users/7
+
+### USER ENTRIES
+
+### post a new entry
+POST http://localhost:3000/api/entries
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6Imt1a2tha2FhbGkiLCJwYXNzd29yZCI6IiQyYiQxMCQyajF3OTI5M0JUcUVxSFY3S21YQkcuV1pzUkZ0VTg2TFpWUFM0TTFuWS56NVZxcC9MZ1hUMiIsImVtYWlsIjoia3Vra2FrYWFsaUBtYWlsbWFpbC5jb20iLCJjcmVhdGVkX2F0IjoiMjAyNS0wMy0wNlQxMDo0MDo0Ni4wMDBaIiwidXNlcl9sZXZlbCI6InJlZ3VsYXIiLCJpYXQiOjE3NDEyNjkzNzQsImV4cCI6MTc0MTM1NTc3NH0.VUPjOi-fO30YpOTGp0Xd6BlNGJOUcoWL-SXJRIEN8GY
+content-type: application/json
+
+{
+ "entry_date": "2025-03-06",
+ "mood": "testing",
+ "weight": 50,
+ "sleep_hours": 6,
+ "notes": "stupid"
+}
+
+### Get user entries
+GET http://localhost:3000/api/entries
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJ1c2VybmFtZSI6ImVkaXRlZG5hbWU0MjAiLCJwYXNzd29yZCI6IiQyYSQxMCQza0ZBeHdNQ1FNdXhsUjdhR2RYS3QualhqM0U3enpBSmxuME03VTlveVFaWWd0a3ZZcEdLYSIsImVtYWlsIjoiZWRpdGVkbWFpbDQyMEBleGFtcGxlLmNvbSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAyLTE3VDExOjEwOjU0LjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0MDIxMjc5NiwiZXhwIjoxNzQwMjk5MTk2fQ.9i9oGexaCBn24vwG4evdb7oywkC7s7jSYW0bXuw_8d4
+
+
+### GET entry by entry id
+GET http://localhost:3000/api/entries/13
+
+
+### Edit user entry
+PUT http://localhost:3000/api/entries/13
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJ1c2VybmFtZSI6ImVkaXRlZG5hbWU0MjAiLCJwYXNzd29yZCI6IiQyYSQxMCQza0ZBeHdNQ1FNdXhsUjdhR2RYS3QualhqM0U3enpBSmxuME03VTlveVFaWWd0a3ZZcEdLYSIsImVtYWlsIjoiZWRpdGVkbWFpbDQyMEBleGFtcGxlLmNvbSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAyLTE3VDExOjEwOjU0LjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0MDIxMjc5NiwiZXhwIjoxNzQwMjk5MTk2fQ.9i9oGexaCBn24vwG4evdb7oywkC7s7jSYW0bXuw_8d4
+content-type: application/json
+
+{
+ "mood": "sittenkin ok",
+ "weight": 70,
+ "sleep_hours": 6,
+ "notes": "editoidaan"
+}
+
+
+### Delete an entry by entry id
+DELETE http://localhost:3000/api/entries/13
+
+### Get habit entries
+GET http://localhost:3000/api/habits
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6Imt1a2tha2FhbGkiLCJwYXNzd29yZCI6IiQyYiQxMCQyajF3OTI5M0JUcUVxSFY3S21YQkcuV1pzUkZ0VTg2TFpWUFM0TTFuWS56NVZxcC9MZ1hUMiIsImVtYWlsIjoia3Vra2FrYWFsaUBtYWlsbWFpbC5jb20iLCJjcmVhdGVkX2F0IjoiMjAyNS0wMy0wNlQxMDo0MDo0Ni4wMDBaIiwidXNlcl9sZXZlbCI6InJlZ3VsYXIiLCJpYXQiOjE3NDEyNjkzNzQsImV4cCI6MTc0MTM1NTc3NH0.VUPjOi-fO30YpOTGp0Xd6BlNGJOUcoWL-SXJRIEN8GY
+
+
+### Post a habit entry
+POST http://localhost:3000/api/habits
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6Imt1a2tha2FhbGkiLCJwYXNzd29yZCI6IiQyYiQxMCQyajF3OTI5M0JUcUVxSFY3S21YQkcuV1pzUkZ0VTg2TFpWUFM0TTFuWS56NVZxcC9MZ1hUMiIsImVtYWlsIjoia3Vra2FrYWFsaUBtYWlsbWFpbC5jb20iLCJjcmVhdGVkX2F0IjoiMjAyNS0wMy0wNlQxMDo0MDo0Ni4wMDBaIiwidXNlcl9sZXZlbCI6InJlZ3VsYXIiLCJpYXQiOjE3NDEyNjkzNzQsImV4cCI6MTc0MTM1NTc3NH0.VUPjOi-fO30YpOTGp0Xd6BlNGJOUcoWL-SXJRIEN8GY
+content-type: application/json
+
+{
+ "entry_date": "2025-03-06",
+  "drank_water": true,
+  "exercised": false,
+  "did_hobby": true,
+  "spent_money": true,
+  "bad_habit": false,
+  "drank_alcohol": false
+}

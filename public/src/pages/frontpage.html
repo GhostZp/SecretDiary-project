@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front</title>
+    <link rel="stylesheet" type="text/css" href="#" />
+    <script type="module" crossorigin src="../../assets/frontpage-BC5ahk4r.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/main-DP3VjRHo.js">
+    <link rel="stylesheet" crossorigin href="../../assets/main-C-QBK6oV.css">
+    <link rel="stylesheet" crossorigin href="../../assets/frontpage-BW6vte6B.css">
+  </head>
+  <body>
+    <div class="clearfix">
+      <header>
+        <div class="head_container">
+          <nav>
+            <ul>
+              <li><a class="navbar_logo">SecretDiary</a></li>
+              <li>
+                <a class="active" href="/src/pages/frontpage.html">Front</a>
+              </li>
+              <li><a href="/src/pages/habitpage.html">Habits</a></li>
+              <li><a href="/src/pages/historypage.html">History</a></li>
+              <button class="logoutBtn">Logout</button>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="ornaments">
+          <img src="../../assets/Ornament-D4U2MWlI.png" class="ornament1" alt="GreenSwirl" />
+
+          <div class="text-container">
+            <h2>Welcome, <span id="usernameDisplay"></span>!</h2>
+
+            <p>
+              This is the front page of your secret diary!
+              <br />
+              Here you can fill out a diary entry. This includes your current
+              mood, your weight. last nights sleep and anything else you want to
+              document
+              <br />
+              You can read all of your diary entries on the history page!
+            </p>
+
+            <h3>Make a diary entry?</h3>
+
+            <div class="registerForm">
+              <form class="registerEntry">
+                <label for="entry_date">Date</label>
+                <input
+                  id="entry_date"
+                  type="date"
+                  name="entry_date"
+                  placeholder="00/00/0000"
+                />
+                <label for="mood">Mood</label>
+                <input
+                  id="mood"
+                  type="text"
+                  name="mood"
+                  placeholder="Mood"
+                  autocomplete="off"
+                />
+                <label for="weight">Weight</label>
+                <input
+                  id="weight"
+                  type="number"
+                  name="weight"
+                  placeholder="Weight"
+                  autocomplete="off"
+                />
+                <label for="sleep_hours">Sleep hours</label>
+                <input
+                  id="sleep_hours"
+                  type="number"
+                  name="sleep_hours"
+                  placeholder="Sleep hours"
+                  autocomplete="off"
+                />
+                <label for="notes">Notes</label>
+                <input
+                  id="notes"
+                  type="text"
+                  name="notes"
+                  placeholder="Notes"
+                  autocomplete="off"
+                />
+                <input
+                  name="submit"
+                  type="submit"
+                  value="Submit"
+                  class="postentry"
+                />
+              </form>
+            </div>
+          </div>
+          <img src="../../assets/Ornament-D4U2MWlI.png" class="ornament2" alt="GreenSwirl" />
+        </div>
+      </main>
+
+      <div id="snackbar">Some text some message..</div>
+      <dialog class="info_dialog">
+        <p></p>
+        <button autofocus>Close</button>
+      </dialog>
+
+      <footer>
+        <div class="foot_container">
+          <div class="t4">Copyright: Anna Kallio</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

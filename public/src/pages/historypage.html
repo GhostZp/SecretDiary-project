@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History</title>
+    <link rel="stylesheet" type="text/css" href="#" />
+    <script type="module" crossorigin src="../../assets/historypage-O3u180oh.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/main-DP3VjRHo.js">
+    <link rel="stylesheet" crossorigin href="../../assets/main-C-QBK6oV.css">
+    <link rel="stylesheet" crossorigin href="../../assets/historypage-CjbAURan.css">
+  </head>
+  <body>
+    <div class="clearfix">
+      <header>
+        <div class="head_container">
+          <nav>
+            <ul>
+              <li><a class="navbar_logo">SecretDiary</a></li>
+              <li><a href="/src/pages/frontpage.html">Front</a></li>
+              <li><a href="/src/pages/habitpage.html">Habits</a></li>
+              <li>
+                <a class="active" href="/src/pages/historypage.html">History</a>
+              </li>
+              <button class="logoutBtn">Logout</button>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <h2>This is your history page!</h2>
+
+        <p>
+          You can see your past diary and habit entries. Just click on the
+          button and see the cards display your secrets!
+          <br />
+          The top button fetches your diary entries that you made on the
+          frontpage while the bottom button fetches your habit entries that you
+          made on the habit page.
+        </p>
+
+        <div class="diary-container">
+          <h3>Fetch diary entries?</h3>
+          <button id="diaryRequest">Click me!</button>
+          <section class="card-area"></section>
+
+          <section class="card-area_null">
+            <div class="parent">
+              <div class="child-left">
+                <img src="../../assets/Book-3Dz1C1AP.jpg" class="Book1" alt="ABook" />
+              </div>
+
+              <div class="child-right">Tänne dataa</div>
+            </div>
+          </section>
+        </div>
+
+        <div class="habit-container">
+          <h3>Fetch habit data?</h3>
+          <button id="habitRequest">Click me!</button>
+          <section class="card-area2"></section>
+
+          <section class="card-area_null2">
+            <div class="parent2">
+              <div class="child-left2">
+                <img src="../../assets/Book-3Dz1C1AP.jpg" class="Book2" alt="ABook" />
+              </div>
+
+              <div class="child-right2">Tänne dataa</div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        <div class="foot_container">
+          <div class="t4">Copyright: Anna Kallio</div>
+        </div>
+      </footer>
+
+      <div id="snackbar">Some text some message..</div>
+      <dialog class="info_dialog">
+        <p></p>
+        <button autofocus>Close</button>
+      </dialog>
+    </div>
+
+  </body>
+</html>
